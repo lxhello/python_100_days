@@ -1,4 +1,4 @@
-from time import sleep
+from time import sleep, time, localtime
 import os
 
 
@@ -8,6 +8,11 @@ class Clock(object):
         self._hour = hour
         self._minute = minute
         self._second = second
+
+    @classmethod
+    def now_time(cls):
+        c_time = localtime(time())
+        return cls(c_time.tm_hour, c_time.tm_min, c_time.tm_sec)
 
     def run(self):
         self._second += 1
@@ -25,7 +30,8 @@ class Clock(object):
 
 
 def main():
-    clock= Clock(23,59,59)
+    # clock = Clock.now_time() //current time
+    clock = Clock(23, 59, 59)  # clock time
     while True:
         print(clock.show_time())
         sleep(1)
@@ -35,5 +41,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

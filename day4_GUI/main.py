@@ -126,7 +126,7 @@ def main():
 def main():
     balls = []
     pygame.init()
-    screen = pygame.display.set_mode((1200, 1000))
+    screen = pygame.display.set_mode((3000, 2000))
     pygame.display.set_caption("big balls eat small balls")
     running = True
     while running:

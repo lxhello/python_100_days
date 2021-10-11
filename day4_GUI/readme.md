@@ -13,6 +13,7 @@
 nonlocal: this mean is not local variable   
 
 使用Pygame进行游戏开发  
-
-
+pygame的sprite（动画精灵）模块就提供了对碰撞检测的支持   
+@unique装饰器可以帮助我们检查保证没有重复值
+@staticmethod 返回函数的静态方法, 静态方法无需实例化,也可以实例化后调用
 '''
